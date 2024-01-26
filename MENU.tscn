@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2oysfh8l2ijf"]
+
+[ext_resource type="Script" path="res://MENU.gd" id="1_cgnsk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cgnsk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 133.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.792157, 0, 0, 1)
+text = "EL DOCTOR F.M."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 42.0
+offset_right = 124.0
+offset_bottom = 179.0
+
+[node name="play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "PLAY
+"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
