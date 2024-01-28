@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0fev1j1unwub"]
+[gd_scene load_steps=8 format=3 uid="uid://b0fev1j1unwub"]
 
 [ext_resource type="Texture2D" uid="uid://cpee6ondounbn" path="res://Assets/COGOTE.png" id="1_r0q4n"]
 [ext_resource type="Texture2D" uid="uid://sqr4qyh1sk2o" path="res://EscenaRecepcion-01.webp" id="1_xy4y8"]
 [ext_resource type="Script" path="res://Button.gd" id="2_00a6b"]
 [ext_resource type="Texture2D" uid="uid://dmewk7usk1btn" path="res://EscenaRecepcion-02-Puerta_Cerrada.webp" id="2_uodjf"]
 [ext_resource type="Script" path="res://BOTONTETAS.gd" id="3_t7bq2"]
-[ext_resource type="AudioStream" uid="uid://b83ettivflci8" path="res://Assets/SFX/PUERTASEX.mp3" id="4_5145j"]
+[ext_resource type="AudioStream" uid="uid://baj815ubcxtpu" path="res://Assets/SFX/Puerta.wav" id="6_2d26c"]
+[ext_resource type="AudioStream" uid="uid://bmrnf23742tpe" path="res://Assets/SFX/Cogote.wav" id="7_mbeqe"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -37,10 +38,10 @@ flat = true
 script = ExtResource("3_t7bq2")
 
 [node name="AbriendoPuerta" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_5145j")
+stream = ExtResource("6_2d26c")
 
 [node name="CogoteSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_5145j")
+stream = ExtResource("7_mbeqe")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="play_cogote"]
 [connection signal="mouse_entered" from="Puerta" to="Puerta" method="_on_mouse_entered"]

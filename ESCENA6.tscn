@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://k3ukrkluprkr" path="res://Assets/SurgeryRoom/1.jpg" id="1_xsr45"]
 [ext_resource type="Script" path="res://RandomSurgeryBackground.gd" id="2_g0cu0"]
-[ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="3_tfw38"]
+[ext_resource type="AudioStream" uid="uid://ncx2q5u1h877" path="res://Assets/Music/Musica Cirugia.wav" id="3_hvqyx"]
 [ext_resource type="Texture2D" uid="uid://dhbv3nj2qvhf5" path="res://Assets/Door.png" id="4_aqws8"]
 [ext_resource type="Script" path="res://Button.gd" id="5_yw8u6"]
 
@@ -15,7 +15,7 @@ texture = ExtResource("1_xsr45")
 script = ExtResource("2_g0cu0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_tfw38")
+stream = ExtResource("3_hvqyx")
 autoplay = true
 
 [node name="SurgeryButton" type="TextureButton" parent="."]

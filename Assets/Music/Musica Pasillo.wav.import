@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqj5autp7qaqy"
+path="res://.godot/imported/Musica Pasillo.wav-4e7e1d2ddfa65116c240debe09f172d9.sample"
+
+[deps]
+
+source_file="res://Assets/Music/Musica Pasillo.wav"
+dest_files=["res://.godot/imported/Musica Pasillo.wav-4e7e1d2ddfa65116c240debe09f172d9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

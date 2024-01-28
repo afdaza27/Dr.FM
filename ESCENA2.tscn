@@ -1,19 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://by4dhuudhaacl"]
+[gd_scene load_steps=12 format=3 uid="uid://by4dhuudhaacl"]
 
-[ext_resource type="AudioStream" uid="uid://bt47bispef2a5" path="res://Assets/coca.wav" id="1_2ivfx"]
 [ext_resource type="Texture2D" uid="uid://gabn2sww826w" path="res://Assets/Fondo_2.png" id="1_ekw23"]
+[ext_resource type="AudioStream" uid="uid://527ckw72ktg1" path="res://Assets/SFX/Mickey.wav" id="1_l10bn"]
 [ext_resource type="Texture2D" uid="uid://cishjn2how4or" path="res://Assets/Final-fotor-bg-remover-2024012601511.png" id="2_adbn8"]
 [ext_resource type="Script" path="res://Puerta.gd" id="4_1nlef"]
 [ext_resource type="Script" path="res://Mickey.gd" id="4_2lkyk"]
 [ext_resource type="Texture2D" uid="uid://dhbv3nj2qvhf5" path="res://Assets/Door.png" id="5_uwi1t"]
 [ext_resource type="Script" path="res://Manota.gd" id="6_nu6t0"]
 [ext_resource type="Texture2D" uid="uid://c5e5bbn6nakjt" path="res://Assets/Mano.png" id="7_et8an"]
-[ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="9_8qpx1"]
+[ext_resource type="AudioStream" uid="uid://baj815ubcxtpu" path="res://Assets/SFX/Puerta.wav" id="9_whhqa"]
+[ext_resource type="AudioStream" uid="uid://cguycddrjx8u8" path="res://Assets/SFX/Guante.wav" id="10_txvrv"]
+[ext_resource type="AudioStream" uid="uid://c0by8p5v1me6b" path="res://Assets/Music/Musica Consultorio.wav" id="11_vci24"]
 
 [node name="Node2D3" type="Node2D"]
 
 [node name="MickeyAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_2ivfx")
+stream = ExtResource("1_l10bn")
 
 [node name="Mascara" type="Sprite2D" parent="."]
 modulate = Color(0.223529, 0.223529, 0.223529, 0.694118)
@@ -57,13 +59,13 @@ texture_normal = ExtResource("7_et8an")
 script = ExtResource("6_nu6t0")
 
 [node name="PuertaAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_2ivfx")
+stream = ExtResource("9_whhqa")
 
 [node name="ManotaAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_2ivfx")
+stream = ExtResource("10_txvrv")
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_8qpx1")
+stream = ExtResource("11_vci24")
 autoplay = true
 
 [connection signal="finished" from="MickeyAudio" to="Mickey" method="_on_audio_finished"]

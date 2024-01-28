@@ -26,6 +26,7 @@ func _process(delta):
 		
 
 func open_doors(sceneName):
+	get_node("ButtonSound").play()
 	opening = true
 	nextScene = sceneName
 	
