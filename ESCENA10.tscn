@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://voq7c846q0ro"]
+
+[ext_resource type="Script" path="res://Button.gd" id="2_7nsqf"]
+[ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="3_boeqf"]
+[ext_resource type="Texture2D" uid="uid://cr2bafwcoeqn" path="res://Assets/Backgrounds/EscenaFinal-01.png" id="3_dfp8y"]
+
+[node name="Node2D2" type="Node2D"]
+
+[node name="RestartButton" type="TextureButton" parent="."]
+offset_left = 928.0
+offset_top = 307.0
+offset_right = 1004.0
+offset_bottom = 448.0
+scale = Vector2(0.355082, 0.355082)
+script = ExtResource("2_7nsqf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_boeqf")
+autoplay = true
+
+[node name="Final" type="Sprite2D" parent="."]
+position = Vector2(578.125, 312.25)
+scale = Vector2(0.94375, 0.94375)
+texture = ExtResource("3_dfp8y")
+
+[connection signal="pressed" from="RestartButton" to="RestartButton" method="_on__button_pressed" binds= ["res://ESCENA1.tscn"]]
