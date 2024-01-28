@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://in5pig02jxo5"]
 
 [ext_resource type="Texture2D" uid="uid://k3ukrkluprkr" path="res://Assets/SurgeryRoom/1.jpg" id="1_vy0pf"]
-[ext_resource type="Script" path="res://RandomSurgeryBackground.gd" id="2_unaoj"]
+[ext_resource type="Script" path="res://RandomWheelBackground.gd" id="2_luyds"]
 [ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="3_84876"]
 [ext_resource type="Texture2D" uid="uid://cssuv74krqtty" path="res://Assets/botonEmpezar.png" id="4_l8l8m"]
 [ext_resource type="Script" path="res://Button.gd" id="5_1nl6b"]
@@ -12,7 +12,7 @@
 position = Vector2(579, 338)
 scale = Vector2(0.968149, 0.968149)
 texture = ExtResource("1_vy0pf")
-script = ExtResource("2_unaoj")
+script = ExtResource("2_luyds")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_84876")
@@ -27,4 +27,4 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_l8l8m")
 script = ExtResource("5_1nl6b")
 
-[connection signal="pressed" from="SurgeryButton" to="SurgeryButton" method="_on__button_pressed" binds= ["ESCENA4.tscn"]]
+[connection signal="pressed" from="SurgeryButton" to="SurgeryButton" method="_on__button_pressed" binds= ["ESCENA7.tscn"]]
