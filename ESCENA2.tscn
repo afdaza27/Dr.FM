@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://by4dhuudhaacl"]
 
 [ext_resource type="Texture2D" uid="uid://gabn2sww826w" path="res://Assets/Fondo_2.png" id="1_ekw23"]
-[ext_resource type="AudioStream" uid="uid://527ckw72ktg1" path="res://Assets/SFX/Mickey.wav" id="1_l10bn"]
-[ext_resource type="Texture2D" uid="uid://cishjn2how4or" path="res://Assets/Final-fotor-bg-remover-2024012601511.png" id="2_adbn8"]
+[ext_resource type="AudioStream" path="res://Assets/SFX/Mickey.wav" id="1_l10bn"]
+[ext_resource type="Texture2D" uid="uid://ml1j85co6q54" path="res://Assets/seatedMickey.png" id="3_pkety"]
 [ext_resource type="Script" path="res://Puerta.gd" id="4_1nlef"]
 [ext_resource type="Script" path="res://Mickey.gd" id="4_2lkyk"]
-[ext_resource type="Texture2D" uid="uid://dhbv3nj2qvhf5" path="res://Assets/Door.png" id="5_uwi1t"]
+[ext_resource type="Texture2D" path="res://Assets/Door.png" id="5_uwi1t"]
 [ext_resource type="Script" path="res://Manota.gd" id="6_nu6t0"]
-[ext_resource type="Texture2D" uid="uid://c5e5bbn6nakjt" path="res://Assets/Mano.png" id="7_et8an"]
-[ext_resource type="AudioStream" uid="uid://baj815ubcxtpu" path="res://Assets/SFX/Puerta.wav" id="9_whhqa"]
-[ext_resource type="AudioStream" uid="uid://cguycddrjx8u8" path="res://Assets/SFX/Guante.wav" id="10_txvrv"]
-[ext_resource type="AudioStream" uid="uid://c0by8p5v1me6b" path="res://Assets/Music/Musica Consultorio.wav" id="11_vci24"]
+[ext_resource type="Texture2D" path="res://Assets/Mano.png" id="7_et8an"]
+[ext_resource type="AudioStream" path="res://Assets/SFX/Puerta.wav" id="9_whhqa"]
+[ext_resource type="AudioStream" path="res://Assets/SFX/Guante.wav" id="10_txvrv"]
+[ext_resource type="AudioStream" path="res://Assets/Music/Musica Consultorio.wav" id="11_vci24"]
 
 [node name="Node2D3" type="Node2D"]
 
@@ -31,11 +31,14 @@ scale = Vector2(0.943576, 0.943577)
 texture = ExtResource("1_ekw23")
 
 [node name="Mickey" type="TextureButton" parent="."]
-offset_left = 584.0
-offset_top = 42.0
-offset_right = 981.0
-offset_bottom = 542.0
-texture_normal = ExtResource("2_adbn8")
+offset_left = 792.0
+offset_top = 66.0
+offset_right = 1816.0
+offset_bottom = 1090.0
+rotation = 0.270526
+scale = Vector2(0.383949, 0.383949)
+texture_normal = ExtResource("3_pkety")
+flip_h = true
 script = ExtResource("4_2lkyk")
 
 [node name="Puerta" type="TextureButton" parent="."]

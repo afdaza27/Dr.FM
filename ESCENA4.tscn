@@ -1,15 +1,15 @@
 [gd_scene load_steps=9 format=3 uid="uid://bx2enh37q2ook"]
 
-[ext_resource type="AudioStream" uid="uid://dqj5autp7qaqy" path="res://Assets/Music/Musica Pasillo.wav" id="2_5hl48"]
 [ext_resource type="Script" path="res://Button.gd" id="2_jhgo5"]
+[ext_resource type="AudioStream" uid="uid://bch6l32wkr82y" path="res://Assets/Music/Musica_PasilloV2.wav" id="2_n6oqy"]
 [ext_resource type="Texture2D" uid="uid://dfmjceoiphnu4" path="res://Assets/Backgrounds/EscenaPasillo-01.png" id="3_d4ffw"]
 [ext_resource type="Texture2D" uid="uid://b3u71n1ubxif3" path="res://Assets/Backgrounds/EscenaPasillo-02-Puerta Lavanderia Cerrada.png" id="4_kahu2"]
 [ext_resource type="Texture2D" uid="uid://bayde2irnl1hm" path="res://Assets/Backgrounds/EscenaPasillo-03-Puerta Cirugia Cerrada.png" id="5_062gn"]
 [ext_resource type="Texture2D" uid="uid://j8p1qwaish2u" path="res://Assets/Backgrounds/EscenaPasillo-04-Puerta Ascensor Cerrada.png" id="6_ucbjv"]
-[ext_resource type="AudioStream" uid="uid://baj815ubcxtpu" path="res://Assets/SFX/Puerta.wav" id="7_2108m"]
-[ext_resource type="AudioStream" uid="uid://ckbsadsg6nxu6" path="res://Assets/SFX/Boton Ascensor.wav" id="8_45aty"]
+[ext_resource type="AudioStream" path="res://Assets/SFX/Puerta.wav" id="7_2108m"]
+[ext_resource type="AudioStream" path="res://Assets/SFX/Boton Ascensor.wav" id="8_45aty"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="SurgeryButton" type="TextureButton" parent="."]
 offset_left = 417.0
@@ -36,7 +36,7 @@ scale = Vector2(-0.364918, 0.155083)
 script = ExtResource("2_jhgo5")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_5hl48")
+stream = ExtResource("2_n6oqy")
 autoplay = true
 
 [node name="Hallway" type="Sprite2D" parent="."]

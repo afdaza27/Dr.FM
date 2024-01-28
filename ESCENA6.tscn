@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://k3ukrkluprkr" path="res://Assets/SurgeryRoom/1.jpg" id="1_xsr45"]
 [ext_resource type="Script" path="res://RandomSurgeryBackground.gd" id="2_g0cu0"]
-[ext_resource type="AudioStream" uid="uid://ncx2q5u1h877" path="res://Assets/Music/Musica Cirugia.wav" id="3_hvqyx"]
-[ext_resource type="Texture2D" uid="uid://dhbv3nj2qvhf5" path="res://Assets/Door.png" id="4_aqws8"]
+[ext_resource type="AudioStream" path="res://Assets/Music/Musica Cirugia.wav" id="3_hvqyx"]
+[ext_resource type="Texture2D" path="res://Assets/Door.png" id="4_aqws8"]
 [ext_resource type="Script" path="res://Button.gd" id="5_yw8u6"]
 
 [node name="Node2D3" type="Node2D"]

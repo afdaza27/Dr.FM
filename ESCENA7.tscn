@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://mcuhy3t1w6vh" path="res://Assets/Backgrounds/EscenaAscensor-02-Salida Correcta.png" id="2_r03s8"]
 [ext_resource type="Texture2D" uid="uid://cn7an6jkphcpd" path="res://Assets/Backgrounds/EscenaAscensor-01.png" id="3_cak52"]
 [ext_resource type="Script" path="res://Button.gd" id="3_us5gk"]
-[ext_resource type="AudioStream" uid="uid://obkofmu6u7ca" path="res://Assets/Music/Musica Ascensor .wav" id="7_u1s07"]
-[ext_resource type="AudioStream" uid="uid://ckbsadsg6nxu6" path="res://Assets/SFX/Boton Ascensor.wav" id="8_tukxn"]
+[ext_resource type="AudioStream" path="res://Assets/Music/Musica Ascensor .wav" id="7_u1s07"]
+[ext_resource type="AudioStream" path="res://Assets/SFX/Boton Ascensor.wav" id="8_tukxn"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_ypceq")
 
 [node name="EscenaAscensor-02-salidaCorrecta" type="Sprite2D" parent="."]

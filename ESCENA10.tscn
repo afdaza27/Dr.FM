@@ -1,21 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://voq7c846q0ro"]
+[gd_scene load_steps=5 format=3 uid="uid://voq7c846q0ro"]
 
 [ext_resource type="Script" path="res://Button.gd" id="2_7nsqf"]
-[ext_resource type="AudioStream" uid="uid://cvxrtuocfijti" path="res://Assets/Music/Musica Victoria.wav" id="2_x0op3"]
+[ext_resource type="AudioStream" uid="uid://cbp4xb6015wkr" path="res://Assets/Music/Musica_VictoriaV2.wav" id="2_w77up"]
 [ext_resource type="Texture2D" uid="uid://cr2bafwcoeqn" path="res://Assets/Backgrounds/EscenaFinal-01.png" id="3_dfp8y"]
+[ext_resource type="Texture2D" uid="uid://belltbdtf5pot" path="res://Assets/restart.png" id="4_wevme"]
 
 [node name="Node2D2" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
 top_level = true
-offset_left = 871.0
-offset_top = 123.0
-offset_right = 1021.0
-offset_bottom = 194.0
+offset_left = 849.0
+offset_top = 77.0
+offset_right = 1500.0
+offset_bottom = 497.0
 scale = Vector2(0.77, 0.77)
-theme_override_font_sizes/font_size = 60
-text = "The END"
+theme_override_font_sizes/font_size = 34
+text = "And so, Steamboat 
+Willie managed to
+escape Dr. FM's 
+      hands with a
+smile on his face...
+and his prostate
+       unchecked."
 
 [node name="RestartButton" type="TextureButton" parent="."]
 offset_left = 928.0
@@ -26,7 +33,7 @@ scale = Vector2(0.355082, 0.355082)
 script = ExtResource("2_7nsqf")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_x0op3")
+stream = ExtResource("2_w77up")
 autoplay = true
 
 [node name="Final" type="Sprite2D" parent="."]
@@ -34,4 +41,13 @@ position = Vector2(578.125, 312.25)
 scale = Vector2(0.94375, 0.94375)
 texture = ExtResource("3_dfp8y")
 
+[node name="RestartButton2" type="TextureButton" parent="."]
+offset_left = 888.0
+offset_top = 440.0
+offset_right = 1088.0
+offset_bottom = 640.0
+texture_normal = ExtResource("4_wevme")
+script = ExtResource("2_7nsqf")
+
 [connection signal="pressed" from="RestartButton" to="RestartButton" method="_on__button_pressed" binds= ["res://ESCENA1.tscn"]]
+[connection signal="pressed" from="RestartButton2" to="RestartButton2" method="_on__button_pressed" binds= ["ESCENA1.tscn"]]

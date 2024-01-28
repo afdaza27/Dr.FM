@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnhrw8occig14"]
+[gd_scene load_steps=6 format=3 uid="uid://bts27cl8dn68a"]
 
 [ext_resource type="Texture2D" uid="uid://hoa57sjafdfd" path="res://Assets/CrutchesRoom/1.png" id="1_rcbt3"]
 [ext_resource type="Script" path="res://RandomCrutchesBackground.gd" id="2_17rvs"]
-[ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="3_76ehy"]
-[ext_resource type="Texture2D" uid="uid://cssuv74krqtty" path="res://Assets/botonEmpezar.png" id="4_bjb34"]
+[ext_resource type="AudioStream" uid="uid://pxpwehxr78x2" path="res://Assets/Music/Musica_PeleaMuletas.wav" id="3_nvcet"]
+[ext_resource type="Texture2D" path="res://Assets/Door.png" id="4_hgvtn"]
 [ext_resource type="Script" path="res://Button.gd" id="5_x2k4k"]
 
 [node name="Node2D" type="Node2D"]
@@ -15,16 +15,16 @@ texture = ExtResource("1_rcbt3")
 script = ExtResource("2_17rvs")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_76ehy")
+stream = ExtResource("3_nvcet")
 autoplay = true
 
 [node name="SurgeryButton" type="TextureButton" parent="."]
-offset_left = 51.0
-offset_top = 419.0
-offset_right = 576.0
-offset_bottom = 719.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("4_bjb34")
+offset_left = 50.0
+offset_top = 406.0
+offset_right = 210.0
+offset_bottom = 694.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("4_hgvtn")
 script = ExtResource("5_x2k4k")
 
 [connection signal="pressed" from="SurgeryButton" to="SurgeryButton" method="_on__button_pressed" binds= ["ESCENA7.tscn"]]
