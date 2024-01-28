@@ -1,7 +1,8 @@
 extends Control
 
+# Global Navigation function
 func _on__button_pressed(scene):
-	get_tree().change_scene_to_file(scene) # Replace with function body.
+	get_tree().change_scene_to_file(scene)
 
 
 func on_button_enter(doorName):
