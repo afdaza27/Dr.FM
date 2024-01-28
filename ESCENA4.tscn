@@ -1,44 +1,75 @@
-[gd_scene load_steps=4 format=3 uid="uid://by3mpub0xo24o"]
+[gd_scene load_steps=8 format=3 uid="uid://by3mpub0xo24o"]
 
-[ext_resource type="Texture2D" uid="uid://yciujjwahtqy" path="res://Assets/Backgrounds/elevatorBackground.png" id="1_meg1k"]
 [ext_resource type="Script" path="res://Button.gd" id="2_jhgo5"]
+[ext_resource type="Texture2D" uid="uid://dfmjceoiphnu4" path="res://Assets/Backgrounds/EscenaPasillo-01.png" id="3_d4ffw"]
 [ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="3_m6jq1"]
+[ext_resource type="Texture2D" uid="uid://b3u71n1ubxif3" path="res://Assets/Backgrounds/EscenaPasillo-02-Puerta Lavanderia Cerrada.png" id="4_kahu2"]
+[ext_resource type="Texture2D" uid="uid://bayde2irnl1hm" path="res://Assets/Backgrounds/EscenaPasillo-03-Puerta Cirugia Cerrada.png" id="5_062gn"]
+[ext_resource type="Texture2D" uid="uid://j8p1qwaish2u" path="res://Assets/Backgrounds/EscenaPasillo-04-Puerta Ascensor Cerrada.png" id="6_ucbjv"]
+[ext_resource type="AudioStream" uid="uid://bt47bispef2a5" path="res://Assets/coca.wav" id="7_qqnpt"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ElevatorBackground" type="Sprite2D" parent="."]
-position = Vector2(583, 350)
-scale = Vector2(0.903509, 0.903509)
-texture = ExtResource("1_meg1k")
-
-[node name="WheelchairButton" type="TextureButton" parent="."]
-offset_left = 865.0
-offset_top = 307.0
-offset_right = 941.0
-offset_bottom = 448.0
-scale = Vector2(0.355082, 0.355082)
+[node name="SurgeryButton" type="TextureButton" parent="."]
+offset_left = 417.0
+offset_top = 164.0
+offset_right = 493.0
+offset_bottom = 305.0
+scale = Vector2(-0.982747, 3.19043)
 script = ExtResource("2_jhgo5")
 
-[node name="CrutchesButton" type="TextureButton" parent="."]
-offset_left = 896.0
-offset_top = 308.0
-offset_right = 972.0
-offset_bottom = 449.0
-scale = Vector2(0.355082, 0.355082)
+[node name="LaundryButton" type="TextureButton" parent="."]
+offset_left = 502.0
+offset_top = 319.0
+offset_right = 578.0
+offset_bottom = 460.0
+scale = Vector2(2.27508, 2.03508)
 script = ExtResource("2_jhgo5")
 
-[node name="EndingButton" type="TextureButton" parent="."]
-offset_left = 928.0
-offset_top = 307.0
-offset_right = 1004.0
-offset_bottom = 448.0
-scale = Vector2(0.355082, 0.355082)
+[node name="ElevatorButton" type="TextureButton" parent="."]
+offset_left = 941.0
+offset_top = 346.0
+offset_right = 1017.0
+offset_bottom = 487.0
+scale = Vector2(-0.364918, 0.155083)
 script = ExtResource("2_jhgo5")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_m6jq1")
 autoplay = true
 
-[connection signal="pressed" from="WheelchairButton" to="WheelchairButton" method="_on__button_pressed" binds= ["res://ESCENA8.tscn"]]
-[connection signal="pressed" from="CrutchesButton" to="CrutchesButton" method="_on__button_pressed" binds= ["res://ESCENA9.tscn"]]
-[connection signal="pressed" from="EndingButton" to="EndingButton" method="_on__button_pressed" binds= ["res://ESCENA10.tscn"]]
+[node name="Hallway" type="Sprite2D" parent="."]
+position = Vector2(576, 338)
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("3_d4ffw")
+
+[node name="LaundryDoor" type="Sprite2D" parent="."]
+position = Vector2(577, 337)
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("4_kahu2")
+
+[node name="SurgeryDoor" type="Sprite2D" parent="."]
+position = Vector2(574, 338)
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("5_062gn")
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(573, 338)
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("6_ucbjv")
+
+[node name="DoorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qqnpt")
+
+[node name="ElevatorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qqnpt")
+
+[connection signal="mouse_entered" from="SurgeryButton" to="SurgeryButton" method="on_button_enter" binds= ["SurgeryDoor"]]
+[connection signal="mouse_exited" from="SurgeryButton" to="SurgeryButton" method="on_button_exit" binds= ["SurgeryDoor"]]
+[connection signal="pressed" from="SurgeryButton" to="SurgeryButton" method="_on__button_pressed" binds= ["res://ESCENA6.tscn"]]
+[connection signal="mouse_entered" from="LaundryButton" to="SurgeryButton" method="on_button_enter" binds= ["LaundryDoor"]]
+[connection signal="mouse_exited" from="LaundryButton" to="SurgeryButton" method="on_button_exit" binds= ["LaundryDoor"]]
+[connection signal="pressed" from="LaundryButton" to="LaundryButton" method="_on__button_pressed" binds= ["res://ESCENA5.tscn"]]
+[connection signal="mouse_entered" from="ElevatorButton" to="SurgeryButton" method="on_button_enter" binds= ["Elevator"]]
+[connection signal="mouse_exited" from="ElevatorButton" to="SurgeryButton" method="on_button_exit" binds= ["Elevator"]]
+[connection signal="pressed" from="ElevatorButton" to="ElevatorButton" method="_on__button_pressed" binds= ["res://ESCENA7.tscn"]]
