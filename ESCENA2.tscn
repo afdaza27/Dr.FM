@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c5e5bbn6nakjt" path="res://Assets/Mano.png" id="7_et8an"]
 [ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="9_8qpx1"]
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="MickeyAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_2ivfx")

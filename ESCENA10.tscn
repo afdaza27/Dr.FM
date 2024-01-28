@@ -6,6 +6,17 @@
 
 [node name="Node2D2" type="Node2D"]
 
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 871.0
+offset_top = 123.0
+offset_right = 1021.0
+offset_bottom = 194.0
+scale = Vector2(0.77, 0.77)
+theme_override_font_sizes/font_size = 60
+text = "NIGGAZ"
+
 [node name="RestartButton" type="TextureButton" parent="."]
 offset_left = 928.0
 offset_top = 307.0

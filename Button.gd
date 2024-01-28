@@ -13,3 +13,6 @@ func on_button_enter(doorName):
 
 func on_button_exit(doorName):
 	get_node("../"+doorName).visible = true
+	
+func play_cogote():
+	get_node("../CogoteSound").play()

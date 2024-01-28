@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dhbv3nj2qvhf5" path="res://Assets/Door.png" id="4_aqws8"]
 [ext_resource type="Script" path="res://Button.gd" id="5_yw8u6"]
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(579, 338)

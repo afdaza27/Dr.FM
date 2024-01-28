@@ -1,17 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0fev1j1unwub"]
+[gd_scene load_steps=7 format=3 uid="uid://b0fev1j1unwub"]
 
 [ext_resource type="Texture2D" uid="uid://cpee6ondounbn" path="res://Assets/COGOTE.png" id="1_r0q4n"]
 [ext_resource type="Texture2D" uid="uid://sqr4qyh1sk2o" path="res://EscenaRecepcion-01.webp" id="1_xy4y8"]
+[ext_resource type="Script" path="res://Button.gd" id="2_00a6b"]
 [ext_resource type="Texture2D" uid="uid://dmewk7usk1btn" path="res://EscenaRecepcion-02-Puerta_Cerrada.webp" id="2_uodjf"]
 [ext_resource type="Script" path="res://BOTONTETAS.gd" id="3_t7bq2"]
 [ext_resource type="AudioStream" uid="uid://b83ettivflci8" path="res://Assets/SFX/PUERTASEX.mp3" id="4_5145j"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Cogote" type="Sprite2D" parent="."]
-position = Vector2(1009, 277)
-scale = Vector2(0.24507, 0.24507)
-texture = ExtResource("1_r0q4n")
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 917.0
+offset_top = 183.0
+offset_right = 1631.0
+offset_bottom = 893.0
+scale = Vector2(0.254707, 0.254707)
+texture_normal = ExtResource("1_r0q4n")
+script = ExtResource("2_00a6b")
 
 [node name="PuertaCerrada" type="Sprite2D" parent="."]
 position = Vector2(577, 324)
@@ -34,6 +39,10 @@ script = ExtResource("3_t7bq2")
 [node name="AbriendoPuerta" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_5145j")
 
+[node name="CogoteSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5145j")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="play_cogote"]
 [connection signal="mouse_entered" from="Puerta" to="Puerta" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Puerta" to="Puerta" method="_on_mouse_exited"]
 [connection signal="pressed" from="Puerta" to="Puerta" method="_on_pressed"]
