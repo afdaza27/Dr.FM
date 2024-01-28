@@ -2,15 +2,24 @@ extends TextureButton
 
 var audio_player : AudioStreamPlayer2D
 
+
 # Llamado cuando el nodo y los niños están listos
 func _ready():
+	get_node("../Mascara").visible = false
+	get_node("../Puerta").visible = false
+	get_node("../Manota").visible = false
+
 	audio_player = get_node("../MickeyAudio")
 	# Conecta la señal 'finished' a la función '_on_audio_finished'
 	#audio_player.connect("finished", self, "_on_audio_finished")
 
 # Esta función se llamará cuando el audio termine de reproducirse
 func _on_audio_finished():
-	get_tree().change_scene_to_file("res://MENU.tscn")
+	# get_tree().change_scene_to_file("res://MENU.tscn")
+	disabled = true
+	get_node("../Mascara").visible = true
+	get_node("../Puerta").visible = true
+	get_node("../Manota").visible = true
 
 func on_pressed():
 	# Reproduce el audio
