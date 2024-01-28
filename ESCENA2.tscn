@@ -3,9 +3,9 @@
 [ext_resource type="AudioStream" uid="uid://bt47bispef2a5" path="res://Assets/coca.wav" id="1_2ivfx"]
 [ext_resource type="Texture2D" uid="uid://gabn2sww826w" path="res://Assets/Fondo_2.png" id="1_ekw23"]
 [ext_resource type="Texture2D" uid="uid://cishjn2how4or" path="res://Assets/Final-fotor-bg-remover-2024012601511.png" id="2_adbn8"]
-[ext_resource type="Texture2D" uid="uid://cssuv74krqtty" path="res://Assets/botonEmpezar.png" id="3_w34bo"]
 [ext_resource type="Script" path="res://Puerta.gd" id="4_1nlef"]
 [ext_resource type="Script" path="res://Mickey.gd" id="4_2lkyk"]
+[ext_resource type="Texture2D" uid="uid://dhbv3nj2qvhf5" path="res://Assets/Door.png" id="5_uwi1t"]
 [ext_resource type="Script" path="res://Manota.gd" id="6_nu6t0"]
 [ext_resource type="Texture2D" uid="uid://c5e5bbn6nakjt" path="res://Assets/Mano.png" id="7_et8an"]
 [ext_resource type="AudioStream" uid="uid://3i1cg0pkw65j" path="res://Assets/SFX/Menu.wav" id="9_8qpx1"]
@@ -39,20 +39,20 @@ script = ExtResource("4_2lkyk")
 [node name="Puerta" type="TextureButton" parent="."]
 top_level = true
 offset_left = 242.0
-offset_top = 148.0
-offset_right = 767.0
-offset_bottom = 448.0
-scale = Vector2(0.338124, 1.18209)
-texture_normal = ExtResource("3_w34bo")
+offset_top = 138.0
+offset_right = 402.0
+offset_bottom = 426.0
+scale = Vector2(1.28, 1.28)
+texture_normal = ExtResource("5_uwi1t")
 script = ExtResource("4_1nlef")
 
 [node name="Manota" type="TextureButton" parent="."]
 top_level = true
-offset_left = 589.0
-offset_top = 135.0
-offset_right = 1613.0
-offset_bottom = 1159.0
-scale = Vector2(0.344643, 0.320781)
+offset_left = 606.0
+offset_top = 125.0
+offset_right = 1630.0
+offset_bottom = 1149.0
+scale = Vector2(0.36, 0.36)
 texture_normal = ExtResource("7_et8an")
 script = ExtResource("6_nu6t0")
 
