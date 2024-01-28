@@ -1,4 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dut046bm34xjk"]
+
+[gd_scene load_steps=8 format=3 uid="uid://bx2enh37q2ook"]
+
 
 [ext_resource type="Script" path="res://Button.gd" id="2_jhgo5"]
 [ext_resource type="Texture2D" uid="uid://dfmjceoiphnu4" path="res://Assets/Backgrounds/EscenaPasillo-01.png" id="3_d4ffw"]

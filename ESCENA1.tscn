@@ -1,20 +1,33 @@
-[gd_scene format=3 uid="uid://b0fev1j1unwub"]
+[gd_scene load_steps=5 format=3 uid="uid://b0fev1j1unwub"]
+
+[ext_resource type="Texture2D" uid="uid://sqr4qyh1sk2o" path="res://EscenaRecepcion-01.webp" id="1_xy4y8"]
+[ext_resource type="Texture2D" uid="uid://dmewk7usk1btn" path="res://EscenaRecepcion-02-Puerta_Cerrada.webp" id="2_uodjf"]
+[ext_resource type="Script" path="res://BOTONTETAS.gd" id="3_t7bq2"]
+[ext_resource type="AudioStream" uid="uid://b83ettivflci8" path="res://Assets/SFX/PUERTASEX.mp3" id="4_5145j"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="PuertaCerrada" type="Sprite2D" parent="."]
+position = Vector2(577, 324)
+scale = Vector2(1.23365, 1.18248)
+texture = ExtResource("1_xy4y8")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="PuertaAbierta" type="Sprite2D" parent="."]
+position = Vector2(577.5, 324.5)
+scale = Vector2(1.23365, 1.18066)
+texture = ExtResource("2_uodjf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Puerta" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 214.0
+offset_right = 635.0
+offset_bottom = 498.0
+flat = true
+script = ExtResource("3_t7bq2")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="AbriendoPuerta" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5145j")
 
-[node name="Button" type="Button" parent="Control"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[connection signal="mouse_entered" from="Puerta" to="Puerta" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Puerta" to="Puerta" method="_on_mouse_exited"]
+[connection signal="pressed" from="Puerta" to="Puerta" method="_on_pressed"]
