@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0fev1j1unwub"]
+[gd_scene load_steps=6 format=3 uid="uid://b0fev1j1unwub"]
 
+[ext_resource type="Texture2D" uid="uid://cpee6ondounbn" path="res://Assets/COGOTE.png" id="1_r0q4n"]
 [ext_resource type="Texture2D" uid="uid://sqr4qyh1sk2o" path="res://EscenaRecepcion-01.webp" id="1_xy4y8"]
 [ext_resource type="Texture2D" uid="uid://dmewk7usk1btn" path="res://EscenaRecepcion-02-Puerta_Cerrada.webp" id="2_uodjf"]
 [ext_resource type="Script" path="res://BOTONTETAS.gd" id="3_t7bq2"]
 [ext_resource type="AudioStream" uid="uid://b83ettivflci8" path="res://Assets/SFX/PUERTASEX.mp3" id="4_5145j"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Cogote" type="Sprite2D" parent="."]
+position = Vector2(1009, 277)
+scale = Vector2(0.24507, 0.24507)
+texture = ExtResource("1_r0q4n")
 
 [node name="PuertaCerrada" type="Sprite2D" parent="."]
 position = Vector2(577, 324)
